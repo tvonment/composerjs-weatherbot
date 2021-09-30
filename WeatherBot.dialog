@@ -69,22 +69,60 @@
       ]
     },
     {
-      "$kind": "Microsoft.OnUnknownIntent",
+      "$kind": "Microsoft.OnIntent",
       "$designer": {
-        "id": "mb2n1u"
+        "id": "7KGop1",
+        "name": "WeatherRequested"
       },
+      "intent": "WeatherRequested",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "plSYqJ"
+          },
+          "activityProcessed": true,
+          "dialog": "GetWeather"
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "qTnGa9",
+        "name": "CancelRequest"
+      },
+      "intent": "CancelRequest",
       "actions": [
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "kMjqz1"
+            "id": "LswnCu"
           },
-          "activity": "${SendActivity_DidNotUnderstand()}"
+          "activity": "${SendActivity_LswnCu()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "0YzYTl"
+          }
         }
       ]
     }
   ],
   "generator": "WeatherBot.lg",
   "id": "WeatherBot",
-  "recognizer": "WeatherBot.lu.qna"
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "WeatherRequested",
+        "pattern": "weather"
+      },
+      {
+        "intent": "CancelRequest",
+        "pattern": "cancel"
+      }
+    ]
+  }
 }

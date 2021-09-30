@@ -1,0 +1,27 @@
+[import](common.lg)
+
+# TextInput_Prompt_bP77sp()
+[Activity
+    Text = ${TextInput_Prompt_bP77sp_text()}
+    SuggestedActions = cancel
+]
+
+# TextInput_Prompt_bP77sp_text()
+- Enter your city
+- Where do you live?
+- From where would you like to get the weather?
+# SendActivity_n5mZj1()
+[ThumbnailCard
+    title = Weather for ${dialog.city}
+    text = ${dialog.weather} (${dialog.temp}&deg;)
+    image = http://openweathermap.org/img/w/${dialog.icon}.png
+]
+# SendActivity_n5mZj1_text()
+- The weather in ${dialog.city} is ${dialog.weather} and the temperature is ${dialog.temp}&deg;.
+# SendActivity_9ikJAv()
+[Activity
+    Text = ${SendActivity_9ikJAv_text()}
+]
+
+# SendActivity_9ikJAv_text()
+- I got an error: ${dialog.api_response.content.message}.

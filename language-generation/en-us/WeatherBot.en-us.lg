@@ -8,13 +8,6 @@
 # SendActivity_Greeting_text()
 - Welcome! Wheaterbot is here.
 - Hi! I'm WeatherBot
-# SendActivity_DidNotUnderstand()
-[Activity
-    Text = ${SendActivity_DidNotUnderstand_text()}
-]
-
-# SendActivity_DidNotUnderstand_text()
-- Sorry, I didn't get that.
 # TextInput_Prompt_3astwc()
 [Activity
     Text = ${TextInput_Prompt_3astwc_text()}
@@ -30,3 +23,10 @@
 # SendActivity_12sWtl_text()
 - Hello ${user.name}, nice to meet you!
 - Hi ${user.name}, a pleasure to meet you!
+# SendActivity_LswnCu()
+[Activity
+    Text = ${SendActivity_LswnCu_text()}
+]
+
+# SendActivity_LswnCu_text()
+- OK. Whenever you're ready, you can ask me about the weather.
