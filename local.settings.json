@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "AzureWebJobsStorage": "",
+    "SkillHostEndpoint": "http://127.0.0.1:3980/api/skills"
+  },
+  "ConnectionStrings": {}
+}

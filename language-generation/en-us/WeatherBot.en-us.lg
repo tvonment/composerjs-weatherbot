@@ -1,0 +1,32 @@
+[import](common.lg)
+
+# SendActivity_Greeting()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+# SendActivity_Greeting_text()
+- Welcome! Wheaterbot is here.
+- Hi! I'm WeatherBot
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# TextInput_Prompt_3astwc()
+[Activity
+    Text = ${TextInput_Prompt_3astwc_text()}
+]
+
+# TextInput_Prompt_3astwc_text()
+- What's your name?
+# SendActivity_12sWtl()
+[Activity
+    Text = ${SendActivity_12sWtl_text()}
+]
+
+# SendActivity_12sWtl_text()
+- Hello ${user.name}, nice to meet you!
+- Hi ${user.name}, a pleasure to meet you!
